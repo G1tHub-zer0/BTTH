@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+span {
+    display: inline-block;
+    margin: 0;
+    color: blue;
+    font-weight: 600;
+}
+span p {
+    color: blue;
+}
+th {
+    color: purple;
+}
+.table2 img {
+    width: 300px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+.logo {
+    width: 70px;
+    vertical-align: top;
+    padding-left: 20px;
+}
+.title {
+    padding-top: 10px;
+}
+.head {
+    color: green !important;
+    text-align: center;
+}
+.table1, .table2 {
+    width: 100%;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+}
+.table1 th {
+    background-color: aliceblue;
+}
+.table2 th {
+    background-color: bisque;
+}
+.table2 tr:first-child th:first-child {
+    background-color: aqua;
+    font-weight: 400;
+    color: green;
+}
+.table2, .table2 th, .table2 td{
+    border: 1.5px solid black;
+}
+.bottom {
+    text-align: center;
+}
+.bottom p {
+    margin: 0;
+}
