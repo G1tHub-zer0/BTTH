@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+        <meta charset=utf-8 />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name = "viewport" content="width=device-width, initial-scale = 1.0" />
+        <title>title goes here</title>
+        <link rel="stylesheet" href="styleform.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post">
+                <div class="text">
+                    <div class="firstname">
+                        <span>Your first name: </span>
+                        <input class="input" type="text" name="first">
+                    </div>
+                    <div class="ID">
+                        <span>Your student ID number: </span>
+                        <input class="input" type="text" name="number">
+                    </div>
+                </div>
+                <div class="radio">
+                    <p>What are bracket are you in: </p>
+                    <input type="radio" name="1 to 18 years">1 to 18 years<br>
+                    <input type="radio" name="19 to 25 years">19 to 25 years<br>
+                    <input type="radio" name="26 to 40 years">26 to 40 years<br>
+                    <input type="radio" name="over 40 years">over 40 years<br>
+                </div>
+                <div class="checkbox">
+                    <p>The best time for me to read email is: </p>
+                    <input type="checkbox" name="Morning">Morning<br>
+                    <input type="checkbox" name="Afternoon">Afternoon<br>
+                    <input type="checkbox" name="Night">Night<br>
+                    <input type="checkbox" name="Midnight">Midnight to dawn<br>
+                </div>
+                <div class="list">
+                    <p>What football team do you go for?</p>
+                    <select name="value">
+                        <option value="None">None
+                        <option value="Manchester United">Manchester United
+                        <option value="Chelsea">Chelsea
+                        <option value="Real Madrid">Real Madrid
+                        <option value="Barcelona">Barcelona
+                        <option value="Bayern Munich">Bayern Munich
+                        <option value="Manchester City">Manchester City
+                        <option value="Juventus">Juventus
+                        <option value="Arsenal">Arsenal
+                        <option value="Liverpool">Liverpool
+                        <option value="Paris Saint German">Paris Saint German
+                    </select>
+                </div>
+                <div class="button">
+                    <button type="submit" class="submit">Submit</button>
+                    <button type="reset" class="submit">Clear your data</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

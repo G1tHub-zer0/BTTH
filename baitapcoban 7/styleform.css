@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    margin-bottom: 10px;
+}
+input, select {
+    outline: none;
+    font: inherit;
+}
+button, input, select {
+    cursor: pointer;
+}
+.container {
+    display: flex;
+    margin: 10px;
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.submit {
+    background-color: #3B71FE;
+    border: none;
+    border-radius: 30px;
+    padding: 9px 40px;
+    color: white;
+    font-size: 14px;
+    width: fit-content;
+}
