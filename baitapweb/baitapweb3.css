@@ -30,6 +30,9 @@ table, th, td {
 td {
     color: blue;
 }
+th {
+    color: green;
+}
 .container {
     margin: 0 10px 10px 10px;
 }
@@ -52,4 +55,7 @@ td {
     color: white;
     border-left-color: white;
     border-top-color: white;
+}
+.place th {
+    background-color: aqua;
 }
