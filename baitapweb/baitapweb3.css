@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img:first-child {
+    width: 20%;
+}
+img:nth-child(2) {
+     width: 50%;
+}
+img:last-child {
+    width: 20%;
+}
+p {
+    color: green;
+    text-align: center;
+    font-weight: 600;
+    margin: 0;
+}
+table {
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid blue;
+    border-collapse: collapse;
+}
+td {
+    color: blue;
+}
+.container {
+    margin: 0 10px 10px 10px;
+}
+.image {
+    display: flex;
+    width: 100%;
+    background-color: blue;
+    margin: 0;
+    gap: 30px;
+}
+.time {
+    background-color: blue;
+    color: white;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: white;
+}
+.tuyen {
+    background-color: blue;
+    color: white;
+    border-left-color: white;
+    border-top-color: white;
+}
