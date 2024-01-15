@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button, input, select {
+    cursor: pointer;
+}
+input {
+    outline: none;
+    font: inherit;
+}
