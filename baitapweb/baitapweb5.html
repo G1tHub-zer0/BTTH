@@ -8,32 +8,49 @@
     </head>
     <body>
         <div class="container">
-            <form action="maito.quockhang0605%ginmail.com" autocomplete="on" method="post">
-                <p>ĐĂNG KÝ THI TIẾNG HÁT TRUYỀN HÌNH</p>
-                <div class="name">
-                    <label for="name">Họ tên </label>
-                    <input type="text" id="name" name="name" required>
+            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post">
+                <div class="title">
+                    <p>ĐĂNG KÝ THI TIẾNG HÁT TRUYỀN HÌNH</p>
                 </div>
-                <div class="live">
-                    <label for="live">Hộ khẩu </label>
-                    <select name="live" required>
-                        <option value="None">
-                        <option value="Tp. Hồ Chí Minh">Tp. Hồ Chí M
-                        <option value="Hà Nội">Hà Nội
-                        <option value="Khánh Hoà">Khánh Hoà
-                        <option value="Đà Nẵng">Đà Nẵng
-                    </select>
+                <div class="form-container">
+                    <div class="form-label">
+                        <label id="lb1" for="name">Họ tên </label>
+                        <label id="lb2" for="live">Hộ khẩu </label>
+                        <label id="lb3" for="gt">Giới tính</label>
+                        <label id="lb4" for="fileInput">Hình:</label>
+                        <label id="lb5" for="list-dk">Danh sách bài hát đăng kí</labelid>
+                    </div>
+                    <div class="form-input">
+                        <div class="name">
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="live">
+                            <select name="live" required>
+                                <option value="None">
+                                <option value="HCM">Tp. Hồ Chí Minh
+                                <option value="HN">Hà Nội
+                                <option value="KH">Khánh Hoà
+                                <option value="ĐN">Đà Nẵng
+                            </select>
+                        </div>
+                        <div class="gt">
+                            <input type="radio" id="gt" name="gt" value="male">Nam
+                            <input type="radio" id="gt" name="gt" value="female">Nữ
+                        </div>
+                        <div class="image-upload-container">
+                            <input type="text" class="file-input" readonly>
+                            <input type="file" id="fileInput" style="display:none">
+                            <button class="browse" onclick="document.getElementById('fileInput').click()">Browse...</button>
+                        </div>
+                        <div class="list">
+                            <textarea id="list-dk" cols="30" rows="4" placeholder="Nhập vào đây"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Dang ky</button>
+                            <button type="reset">Xoa</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="gt">
-                    <label for="gt">Giới tính</label>
-                    <input type="radio" id="gt" name="gt" required>Nam
-                    <input type="radio" id="gt" name="gt" required>Nữ
-                </div>
-                <div class="upload-img">
-                    <label for="file">Hình </label>
-                    <input type="file" id="file" value="Browse..." accept="image/* required">
-                </div>
-                
             </form>
         </div>
     </body>
