@@ -1,0 +1,83 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Bai Tap Web 6</title>
+        <link rel="stylesheet" href="baitapweb6.css">
+    </head>
+    <body>
+        <div class="top">
+            <img src="../images/car3.jpg" alt="banner">
+        </div>
+        <div class="main">
+            <table>
+                <tr>
+                    <td>Trang chủ</td>
+                </tr>
+                <tr>
+                    <td>Giới thiệu sản phẩm</td>
+                </tr>
+                <tr>
+                    <td>Các đại lý</td>
+                </tr>
+                <tr>
+                    <td>Dịch vụ</td>
+                </tr>
+                <tr>
+                    <td>Hợp tác</td>
+                </tr>
+                <tr>
+                    <td>Góp ý</td>
+                </tr>
+                <tr>
+                    <td>Quảng cáo</td>
+                </tr>
+            </table>
+            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post">
+                <div class="title">
+                    <p>Hộp thư góp ý</p>
+                </div>
+                <div class="form-container">
+                    <div class="form-label">
+                        <label id="lb1" for="name">Họ tên </label>
+                        <label id="lb2" for="live">Hộ khẩu </label>
+                        <label id="lb4" for="feedback">Góp ý về lĩnh vực </label>
+                        <label id="lb3" for="language">Ngôn ngữ </label>
+                        <label id="lb5" for="nd">Nội dung</labelid>
+                    </div>
+                    <div class="form-input">
+                        <div class="name">
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="live">
+                            <select name="live" required>
+                                <option value="None">
+                                <option value="HCM">Tp. Hồ Chí Minh
+                                <option value="HN">Hà Nội
+                                <option value="KH">Khánh Hoà
+                                <option value="ĐN">Đà Nẵng
+                            </select>
+                        </div>
+                        <div class="feedback">
+                            <input type="checkbox" id="feedback" name="DV" value="Dichvu">Dịch vụ
+                            <input type="checkbox" id="feedback" name="SP" value="Sanpham">Sản phẩm
+                            <input type="checkbox" id="feedback" name="OT" value="Khac">Loại khác
+                        </div>
+                        <div class="language">
+                            <input type="radio" id="language" name="language" value="Anh">Anh
+                            <input type="radio" id="language" name="language" value="Viet">Việt
+                        </div>
+                        <div class="nd-container">
+                            <textarea id="nd" cols="30" rows="4" placeholder="Nhập vào đây"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Gui</button>
+                            <button type="reset">Xoa</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
