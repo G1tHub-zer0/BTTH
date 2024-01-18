@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Bai Tap Web 6</title>
         <link rel="stylesheet" href="baitapweb6.css">
+        <script>
+            function thongbao() {
+                alert('Gửi thành công');
+            }
+        </script>
     </head>
     <body>
         <div class="top">
@@ -34,7 +39,7 @@
                     <td>Quảng cáo</td>
                 </tr>
             </table>
-            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post">
+            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post" onsubmit="thongbao()">
                 <div class="title">
                     <p>Hộp thư góp ý</p>
                 </div>
@@ -48,11 +53,11 @@
                     </div>
                     <div class="form-input">
                         <div class="name">
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" tabindex="1" required>
                         </div>
                         <div class="live">
-                            <select name="live" required>
-                                <option value="None">
+                            <select name="live" tabindex="2" required>
+                                <option value="None" selected>
                                 <option value="HCM">Tp. Hồ Chí Minh
                                 <option value="HN">Hà Nội
                                 <option value="KH">Khánh Hoà
@@ -60,20 +65,20 @@
                             </select>
                         </div>
                         <div class="feedback">
-                            <input type="checkbox" id="feedback" name="DV" value="Dichvu">Dịch vụ
-                            <input type="checkbox" id="feedback" name="SP" value="Sanpham">Sản phẩm
-                            <input type="checkbox" id="feedback" name="OT" value="Khac">Loại khác
+                            <input type="checkbox" id="feedback" name="DV" value="Dichvu" tabindex="3">Dịch vụ
+                            <input type="checkbox" id="feedback" name="SP" value="Sanpham" tabindex="4">Sản phẩm
+                            <input type="checkbox" id="feedback" name="OT" value="Khac" tabindex="5">Loại khác
                         </div>
                         <div class="language">
-                            <input type="radio" id="language" name="language" value="Anh">Anh
-                            <input type="radio" id="language" name="language" value="Viet">Việt
+                            <input type="radio" id="language" name="language" value="Anh" tabindex="6">Anh
+                            <input type="radio" id="language" name="language" value="Viet" tabindex="6">Việt
                         </div>
                         <div class="nd-container">
-                            <textarea id="nd" cols="30" rows="4" placeholder="Nhập vào đây"></textarea>
+                            <textarea id="nd" name="message" cols="30" rows="4" placeholder="Nhập vào đây" tabindex="7"></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">Gui</button>
-                            <button type="reset">Xoa</button>
+                            <button type="submit" tabindex="8">Gui</button>
+                            <button type="reset" tabindex="9">Xoa</button>
                         </div>
                     </div>
                 </div>

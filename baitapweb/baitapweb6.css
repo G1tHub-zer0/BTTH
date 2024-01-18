@@ -17,15 +17,17 @@ td {
     font-weight: 600;
 }
 table {
-    max-width: 15%;
+    min-width: 15%;
     max-height: 282px;
 }
 button, input, select {
     cursor: pointer;
 }
 input, textarea {
-    outline: none;
     font: inherit;
+}
+[tabindex]:focus {
+    outline: 1px solid black;
 }
 select {
     width: auto;

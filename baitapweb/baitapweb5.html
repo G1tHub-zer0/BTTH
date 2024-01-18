@@ -5,10 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Bai Tap Web 5</title>
         <link rel="stylesheet" href="baitapweb5.css">
+        <script>
+            function thongbao() {
+                alert('Gửi thành công');
+            }
+        </script>
     </head>
     <body>
         <div class="container">
-            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post">
+            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post" onsubmit="thongbao()">
                 <div class="title">
                     <p>ĐĂNG KÝ THI TIẾNG HÁT TRUYỀN HÌNH</p>
                 </div>
@@ -22,11 +27,11 @@
                     </div>
                     <div class="form-input">
                         <div class="name">
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" tabindex="1" required>
                         </div>
                         <div class="live">
-                            <select name="live" required>
-                                <option value="None">
+                            <select name="live" tabindex="2" required>
+                                <option value="None" selected>
                                 <option value="HCM">Tp. Hồ Chí Minh
                                 <option value="HN">Hà Nội
                                 <option value="KH">Khánh Hoà
@@ -34,20 +39,20 @@
                             </select>
                         </div>
                         <div class="gt">
-                            <input type="radio" id="gt" name="gt" value="male">Nam
-                            <input type="radio" id="gt" name="gt" value="female">Nữ
+                            <input type="radio" id="gt" name="gt" value="male" tabindex="3">Nam
+                            <input type="radio" id="gt" name="gt" value="female" tabindex="3">Nữ
                         </div>
                         <div class="image-upload-container">
                             <input type="text" class="file-input" readonly>
                             <input type="file" id="fileInput" style="display:none">
-                            <button class="browse" onclick="document.getElementById('fileInput').click()">Browse...</button>
+                            <button class="browse" onclick="document.getElementById('fileInput').click()" tabindex="4">Browse...</button>
                         </div>
                         <div class="list">
-                            <textarea id="list-dk" cols="30" rows="4" placeholder="Nhập vào đây"></textarea>
+                            <textarea id="list-dk" name="message" cols="30" rows="4" placeholder="Nhập vào đây" tabindex="5"></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">Dang ky</button>
-                            <button type="reset">Xoa</button>
+                            <button type="submit" tabindex="6">Dang ky</button>
+                            <button type="reset" tabindex="7">Xoa</button>
                         </div>
                     </div>
                 </div>

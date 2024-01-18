@@ -7,12 +7,15 @@ div {
     margin-bottom: 10px;
 }
 input, select {
-    outline: none;
     font: inherit;
+}
+[tabindex]:focus {
+    outline: 1px solid black;
 }
 button, input, select {
     cursor: pointer;
 }
+
 .container {
     display: flex;
     margin: 10px;

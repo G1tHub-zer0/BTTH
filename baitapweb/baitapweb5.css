@@ -9,8 +9,10 @@ button, input, select {
     cursor: pointer;
 }
 input, textarea {
-    outline: none;
     font: inherit;
+}
+[tabindex]:focus {
+    outline: 1px solid black;
 }
 select {
     width: auto;
@@ -41,12 +43,10 @@ button {
     justify-content: center;
     color: green;
     font-weight: 600;
-    background-color: aquamarine;
-    margin-left: 316px;
-    padding-right: 40px;
+    margin-bottom: 10px;
 }
 .form-container {
-    display: flex;
+    display: flex;  
     flex-direction: row;
     gap: 5px;
     justify-content: center;
@@ -56,7 +56,7 @@ button {
     display: flex;
     flex-direction: column;
     text-align: right;
-    background-color: aquamarine;
+    background-color: aliceblue;
 }
 .form-input {
     display: flex;
