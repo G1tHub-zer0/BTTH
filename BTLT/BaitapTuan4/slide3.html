@@ -1,0 +1,136 @@
+<html lang="en">
+    <head>
+        <title>Slide 3</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                max-width: 1300px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            button, input, select {
+                cursor: pointer;
+            }
+            input, textarea {
+                font: inherit;
+            }
+            [tabindex]:focus {
+                outline: 1px solid black;
+            }
+            select {
+                width: auto;
+                height: 25px;
+            }
+            textarea {
+                vertical-align: middle;
+                min-height: 100px;
+                resize: vertical;
+            }
+            label {
+                color: blue;
+            }
+            button {
+                padding: 4px;
+                background-color: aliceblue;
+                color: black;
+                border: 1px solid blue;
+                border-radius: 5px;
+            }
+            .main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .title {
+                text-align: center;
+                color: green;
+                font-size: 20px;
+                font-weight: 600;
+                background-color: aliceblue;
+                width: 1120px;
+                margin-bottom: 5px;
+            }
+            .form-container {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+                justify-content: center;
+            }
+            .form-label {
+                width: 250px;
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+            }
+            .form-input {
+                display: flex;
+                flex-direction: column;
+                gap: 5px
+            }
+            #lb1 {
+                margin-top: 2px;
+            }
+            #lb2 {
+                margin-top: 12px;
+            }
+            #lb3 {
+                margin-top: 9px;
+            }
+            #lb4 {
+                margin-top: 7px;
+            }
+            #lb5 {
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post">
+                <div class="title">
+                    <p>Hộp thư góp ý</p>
+                </div>
+                <div class="form-container">
+                    <div class="form-label">
+                        <label id="lb1" for="name">Họ tên </label>
+                        <label id="lb2" for="live">Hộ khẩu </label>
+                        <label id="lb4" for="feedback">Góp ý về lĩnh vực </label>
+                        <label id="lb3" for="language">Ngôn ngữ </label>
+                        <label id="lb5" for="nd">Nội dung</labelid>
+                    </div>
+                    <div class="form-input">
+                        <div class="name">
+                            <input type="text" id="name" name="name" tabindex="1" required>
+                        </div>
+                        <div class="live">
+                            <select name="live" tabindex="2" required>
+                                <option value="None" selected>
+                                <option value="HCM">Tp. Hồ Chí Minh
+                                <option value="HN">Hà Nội
+                                <option value="KH">Khánh Hoà
+                                <option value="ĐN">Đà Nẵng
+                            </select>
+                        </div>
+                        <div class="feedback">
+                            <input type="checkbox" id="feedback" name="DV" value="Dichvu" tabindex="3">Dịch vụ
+                            <input type="checkbox" id="feedback" name="SP" value="Sanpham" tabindex="4">Sản phẩm
+                            <input type="checkbox" id="feedback" name="OT" value="Khac" tabindex="5">Loại khác
+                        </div>
+                        <div class="language">
+                            <input type="radio" id="language" name="language" value="Anh" tabindex="6">Anh
+                            <input type="radio" id="language" name="language" value="Viet" tabindex="6">Việt
+                        </div>
+                        <div class="nd-container">
+                            <textarea id="nd" name="message" cols="30" rows="4" placeholder="Nhập vào đây" tabindex="7"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" tabindex="8">Gui</button>
+                            <button type="reset" tabindex="9">Xoa</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

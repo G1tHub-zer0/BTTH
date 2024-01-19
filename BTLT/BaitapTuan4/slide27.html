@@ -1,0 +1,97 @@
+<html lang="en">
+    <head>
+        <title>Slide 27</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                max-width: 1300px;
+            }
+            button, input {
+                cursor: pointer;
+            }
+            input, textarea {
+                font: inherit;
+            }
+            [tabindex]:focus {
+                outline: 1px solid black;
+            }
+            textarea {
+                width: 300px;
+                height: 100px;
+                min-height: 50px;
+                margin-top: 10px;
+                display: block;
+                resize: vertical;
+            }
+            h2 {
+                text-align: center;
+                color: green;
+            }
+            hr {
+                background-color: green;
+                height: 2px;
+            }
+            legend {
+                color: blueviolet;
+            }
+            fieldset {
+                border-radius: 5px;
+                border: 1px solid green;
+            }
+            button {
+                padding: 4px;
+                background-color: aliceblue;
+                color: black;
+                border: 1px solid blue;
+                border-radius: 5px;
+            }
+            .container {
+                margin: 10px;
+            }
+            .button {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Application Form</h2>
+            <hr>
+            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post">
+                <fieldset>
+                    <legend>Positon</legend>
+                        <label for="position">Application for the post of: </label>
+                        <input type="text" id="position" name="position" tabindex="1" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Sex</legend>
+                        <input type="radio" id="sex" name="sex" value="Male" tabindex="2">Male
+                        <input type="radio" id="sex" name="sex" value="Female" tabindex="2">Female
+                </fieldset>
+                <fieldset>
+                    <legend>Educational Qualifications</legend>
+                        <input type="radio" id="edu" name="edu" value="Graduate" tabindex="3">Graduate
+                        <input type="radio" id="edu" name="edu" value="Postgraduate" tabindex="3">Postgraduate
+                </fieldset>
+                <fieldset>
+                    <legend>Language known</legend>
+                        <input type="checkbox" id="language" name="language" value="English" tabindex="4">English
+                        <input type="checkbox" id="language" name="language" value="French" tabindex="5">French
+                        <input type="checkbox" id="language" name="language" value="German" tabindex="6">German
+                </fieldset>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" tabindex="7" maxlength="60" required>
+                    <textarea name="address" id="name" cols="30" rows="10" placeholder="Enter Address"></textarea>
+                </fieldset>
+                <div class="button">
+                    <button type="submit" tabindex="8">Gui</button>
+                    <button type="reset" tabindex="9">Xoa</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
