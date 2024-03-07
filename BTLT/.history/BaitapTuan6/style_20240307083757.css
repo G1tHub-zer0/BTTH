@@ -13,7 +13,6 @@ body {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 input[type="text"],
@@ -22,13 +21,7 @@ button {
   margin-bottom: 10px;
 }
 
-input[type="text"] {
-  display: inline-block;
-  width: auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+input[type="text"],
 input[type="radio"] {
   display: block;
   width: auto;
@@ -44,7 +37,6 @@ input[type="radio"] {
 }
 
 button {
-  margin-top: 20px;
   display: inline-block;
   padding: 10px 20px;
   background-color: #4caf50;
@@ -52,6 +44,7 @@ button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {

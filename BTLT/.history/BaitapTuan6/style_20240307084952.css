@@ -13,7 +13,6 @@ body {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 input[type="text"],
@@ -61,5 +60,8 @@ button:hover {
 #result {
   margin-top: 10px;
   font-weight: bold;
+  text-align: center;
+}
+.button-center {
   text-align: center;
 }

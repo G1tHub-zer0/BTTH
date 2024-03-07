@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='./style.css'>
+    <title></title>
+</head>
+
+<body>
+    <form id="calculatorForm">
+        <input type="text" id="operand1" placeholder="Số hạng thứ nhất">
+        <input type="text" id="operand2" placeholder="Số hạng thứ hai"><br>
+        <input type="radio" id="add" name="operation" value="add">
+        <label for="add">Cộng</label>
+        <input type="radio" id="subtract" name="operation" value="subtract">
+        <label for="subtract">Trừ</label>
+        <input type="radio" id="multiply" name="operation" value="multiply">
+        <label for="multiply">Nhân</label>
+        <input type="radio" id="divide" name="operation" value="divide">
+        <label for="divide">Chia</label><br>
+        <button type="button" onclick="calculate()">Tính</button>
+        <button type="reset">Tính lại</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src='./app.js'></script>
+</body>
+
+</html>

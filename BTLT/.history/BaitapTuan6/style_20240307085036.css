@@ -63,3 +63,6 @@ button:hover {
   font-weight: bold;
   text-align: center;
 }
+.button-center {
+  text-align: center;
+}
