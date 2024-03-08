@@ -40,7 +40,7 @@
             </table>
         </div>
         <div class="center">
-            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post">
+            <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post" onsubmit="thongbao()">
                 <div class="title">
                     <p>Đăng ký giấy phép lái xe ô tô</p>
                 </div>
@@ -52,10 +52,10 @@
                         <label id="lb4" for="language">Hình xe </label>
                     </div>
                     <div class="form-input">
-                        <div id="input-name">
-                            <input type="text" id="name" name="name" tabindex="1" required>
+                        <div id="name">
+                            <input type="text" id="name" name="name" value="" tabindex="1" required>
                         </div>
-                        <div id="input-cmnd">
+                        <div id="cmnd">
                             <input type="text" id="cmnd" name="cmnd" tabindex="2" required>
                         </div>
                         <div id="live">
@@ -67,7 +67,7 @@
                                 <option value="ĐN">Đà Nẵng
                             </select>
                         </div>
-                        <div id="get-cars">
+                        <div class="cars">
                             <select id="cars" name="car" tabindex="4" required>
                                 <option value="None" selected>
                                 <option value="toyota">Toyota

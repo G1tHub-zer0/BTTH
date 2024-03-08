@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tiếng hát truyền hình</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Đăng ký tiếng hát truyền hình</h1>
+    <form action="#">
+        <div class="form-group">
+            <label for="name" class="label-right">Họ tên:</label>
+            <input type="text" id="name" name="name" class="input-field">
+        </div>
+        <div class="form-group">
+            <label for="hukou" class="label-right">Hộ khẩu:</label>
+            <select id="hukou" name="hukou" class="input-field">
+                <option value="">Chọn tỉnh/thành phố</option>
+                <option value="tp-hcm">TP. Hồ Chí Minh</option>
+                <option value="ha-noi">Hà Nội</option>
+                <option value="da-nang">Đà Nẵng</option>
+                ...
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="gender" class="label-right">Giới tính:</label>
+            <label for="male" class="radio-inline">
+                <input type="radio" id="male" name="gender" value="male" checked>
+                Nam
+            </label>
+            <label for="female" class="radio-inline">
+                <input type="radio" id="female" name="gender" value="female">
+                Nữ
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="image" class="label-right">Hình ảnh:</label>
+            <input type="image" id="image" name="image" class="input-image">
+        </div>
+        <div class="form-group">
+            <label for="songs" class="label-right">Danh sách bài hát đăng ký:</label>
+            <textarea id="songs" name="songs" class="input-field" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="button">Đăng ký</button>
+            <button type="reset" class="button">Xóa</button>
+        </div>
+    </form>
+</body>
+
+</html>

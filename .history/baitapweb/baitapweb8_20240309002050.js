@@ -26,38 +26,47 @@ carSelect.addEventListener("change", () => {
 });
 image.src = cars[carSelect.value];
 
-const form = document.querySelector("form");
+const form = document.querySelector("form"); // Select the form element
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
+  event.preventDefault(); // Prevent default form submission
 
   const nameInput =
-    document.getElementById("name").value;
+    document.getElementById("name").value; // Get user name
 
+  // Create a new table row element
   const newRow = document.createElement("tr");
 
+  // Calculate the latest STT based on existing rows (handles deletion)
   const latestSTT = calculateLatestSTT();
 
+  // Create cells for STT, name, and detail link
   const sttCell = document.createElement("td");
   const nameCell = document.createElement("td");
   const detailCell = document.createElement("td");
 
+  // Set content for cells
   sttCell.textContent = latestSTT;
   nameCell.textContent = nameInput;
   detailCell.innerHTML =
-    "<a href='#'>Xem chi tiết</a>";
+    "<a href='#'>Xem chi tiết</a>"; // Create a link with text "Xem chi tiết"
 
+  // Append cells to the new row
   newRow.appendChild(sttCell);
   newRow.appendChild(nameCell);
   newRow.appendChild(detailCell);
 
+  // Get the table body element
   const tableBody = document.querySelector(
     ".table-list table tbody"
   );
 
+  // Append the new row to the table body
   tableBody.appendChild(newRow);
 
-  alert("Đăng ký thành công!");
+  alert("Đăng ký thành công!"); // Show success message
+
+  // Reset the form after successful submission
   form.reset();
 });
 
@@ -77,5 +86,6 @@ function calculateLatestSTT() {
     }
   });
 
+  // Increment the maximum STT by 1
   return maxSTT + 1;
 }
