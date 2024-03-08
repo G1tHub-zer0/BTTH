@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phản hồi về môn học Lập trình Web</title>
+    <link rel="stylesheet" href="formsv.css">
+</head>
+
+</head>
+
+<body>
+    <h1>Phản hồi về môn học Lập trình web</h1>
+    <form id="feedback-form">
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            <div class="form-group">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Phản hồi về môn học</legend>
+            <div class="form-group">
+                <label for="content">Nội dung phản hồi:</label>
+                <textarea id="content" name="content" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="rating">Đánh giá môn học:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">-- Chọn đánh giá --</option>
+                    <option value="1">Rất tốt</option>
+                    <option value="2">Tốt</option>
+                    <option value="3">Bình thường</option>
+                    <option value="4">Khá tệ</option>
+                    <option value="5">Rất tệ</option>
+                </select>
+            </div>
+        </fieldset>
+        <button type="submit">Gửi phản hồi</button>
+    </form>
+
+    </form>
+    <script src="formsv.js"></script>
+</body>
+
+</html>
