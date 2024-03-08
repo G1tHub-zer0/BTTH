@@ -27,4 +27,6 @@ carSelect.addEventListener("change", () => {
     imageContainer.classList.add("hidden");
   }
 });
+
+// Hiển thị ảnh mặc định
 image.src = cars[carSelect.value];

@@ -2,6 +2,7 @@ function thongbao() {
   alert("Gửi thành công");
 }
 const cars = {
+  None: "";
   toyota:
     "https://www.toyota.com.vn/media/hdxbzeb2/bang-gia-xe-toyota-2.jpeg?width=777&height=649&mode=max",
   mazda:

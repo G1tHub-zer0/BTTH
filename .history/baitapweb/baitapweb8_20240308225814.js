@@ -27,4 +27,3 @@ carSelect.addEventListener("change", () => {
     imageContainer.classList.add("hidden");
   }
 });
-image.src = cars[carSelect.value];
