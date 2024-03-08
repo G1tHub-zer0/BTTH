@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bai Tap Web 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="mailto:quockhang0605@gmail.com" autocomplete="on" method="post">
+            <div class="title">
+                <p>ĐĂNG KÝ THI TIẾNG HÁT TRUYỀN HÌNH</p>
+            </div>
+            <div class="form-container">
+                <div class="form-label">
+                </div>
+                <div class="form-input">
+                    <label id="lb1" for="name">Họ tên </label>
+                    <div class="name">
+                        <input type="text" id="name" name="name" tabindex="1" required>
+                    </div>
+                    <div class="live">
+                        <label id="lb2" for="live">Hộ khẩu </label>
+                        <select name="live" tabindex="2" required>
+                            <option value="None" selected>
+                            <option value="HCM">Tp. Hồ Chí Minh
+                            <option value="HN">Hà Nội
+                            <option value="KH">Khánh Hoà
+                            <option value="ĐN">Đà Nẵng
+                        </select>
+                    </div>
+                    <div class="gt">
+                        <label id="lb3" for="gt">Giới tính</label>
+                        <input type="radio" id="gt" name="gt" value="male" tabindex="3">Nam
+                        <input type="radio" id="gt" name="gt" value="female" tabindex="3">Nữ
+                    </div>
+                    <div class="file-input">
+                        <label id="lb4" for="fileInput">Hình:</label>
+                        <input type="file" id="image-input" name="image">
+                    </div>
+                    <div class="list">
+                        <label id="lb5" for="list-dk">Danh sách bài hát đăng kí</labelid>
+                            <textarea id="list-dk" name="message" cols="30" rows="4" placeholder="Nhập vào đây"
+                                tabindex="5"></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit" tabindex="6">Dang ky</button>
+                        <button type="reset" tabindex="7">Xoa</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

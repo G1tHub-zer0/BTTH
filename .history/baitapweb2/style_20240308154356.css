@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #f7f7f7;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .main-content {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="file"],
+  select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .btn-dang-ky {
+    background-color: #0099ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #danh_sach_bai_hat {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #danh_sach_bai_hat th,
+  #danh_sach_bai_hat td {
+    border: 1px solid #ddd;
+    padding: 5px
+  
