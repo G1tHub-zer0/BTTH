@@ -87,7 +87,7 @@ td {
   border: 1px solid red;
   border-collapse: collapse;
 }
-.table-add table:first-child th:first-child {
+.table-add th:first-child {
   background-image: linear-gradient(
     to top,
     white,
@@ -98,22 +98,6 @@ td {
 .table-add td {
   background-color: white;
   color: blue;
-}
-.table-list th[colspan="5"] {
-  background-color: cornflowerblue;
-  color: white;
-}
-.table-list th,
-td {
-  border: 1px solid red;
-  border-collapse: collapse;
-}
-.table-list th {
-  background-color: aqua;
-  color: purple;
-}
-.table-list td {
-  font-weight: 500;
 }
 .right {
   background-color: antiquewhite;

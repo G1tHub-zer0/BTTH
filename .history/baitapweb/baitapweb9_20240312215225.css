@@ -65,10 +65,6 @@ input[type="text"] {
   background-color: antiquewhite;
   border: 1px solid grey;
 }
-.center {
-  display: flex;
-  justify-content: center;
-}
 .left table,
 td {
   text-align: left;
@@ -87,7 +83,7 @@ td {
   border: 1px solid red;
   border-collapse: collapse;
 }
-.table-add table:first-child th:first-child {
+.table-add th {
   background-image: linear-gradient(
     to top,
     white,
@@ -99,23 +95,8 @@ td {
   background-color: white;
   color: blue;
 }
-.table-list th[colspan="5"] {
-  background-color: cornflowerblue;
-  color: white;
-}
-.table-list th,
-td {
-  border: 1px solid red;
-  border-collapse: collapse;
-}
-.table-list th {
-  background-color: aqua;
-  color: purple;
-}
-.table-list td {
-  font-weight: 500;
-}
 .right {
+  /* height: 500px; */
   background-color: antiquewhite;
   border: 1px solid grey;
 }

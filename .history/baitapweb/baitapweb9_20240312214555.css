@@ -57,17 +57,15 @@ input[type="text"] {
   font-weight: 700;
 }
 .main {
-  display: grid;
-  grid-template-columns: 15% 65% 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .left {
+  width: 15%;
   height: 500px;
   background-color: antiquewhite;
   border: 1px solid grey;
-}
-.center {
-  display: flex;
-  justify-content: center;
 }
 .left table,
 td {
@@ -78,6 +76,9 @@ td {
   background-color: blueviolet;
   font-weight: 600;
 }
+.center {
+  width: 65%;
+}
 .table-main table {
   width: 500px;
   height: 200px;
@@ -87,7 +88,7 @@ td {
   border: 1px solid red;
   border-collapse: collapse;
 }
-.table-add table:first-child th:first-child {
+.table-add th {
   background-image: linear-gradient(
     to top,
     white,
@@ -99,25 +100,14 @@ td {
   background-color: white;
   color: blue;
 }
-.table-list th[colspan="5"] {
-  background-color: cornflowerblue;
-  color: white;
-}
-.table-list th,
-td {
-  border: 1px solid red;
-  border-collapse: collapse;
-}
-.table-list th {
-  background-color: aqua;
-  color: purple;
-}
-.table-list td {
-  font-weight: 500;
-}
 .right {
+  width: 20%;
+  /* display: flex; */
+  /* flex-direction: column; */
+  height: 500px;
   background-color: antiquewhite;
   border: 1px solid grey;
+  float: right;
 }
 .img1 {
   height: 100px;
