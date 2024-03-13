@@ -25,10 +25,6 @@ input[type="text"] {
 td img {
   width: 70%;
   max-height: 100%;
-  vertical-align: middle;
-}
-button {
-  vertical-align: middle;
 }
 .head {
   background: linear-gradient(
@@ -56,11 +52,6 @@ button {
   color: white;
   font-size: 20px;
   font-weight: 600;
-}
-.heading p:last-child {
-  color: blue;
-  font-size: 25px;
-  font-weight: 700;
 }
 .main {
   display: grid;

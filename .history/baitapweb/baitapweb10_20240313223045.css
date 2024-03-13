@@ -25,10 +25,6 @@ input[type="text"] {
 td img {
   width: 70%;
   max-height: 100%;
-  vertical-align: middle;
-}
-button {
-  vertical-align: middle;
 }
 .head {
   background: linear-gradient(
@@ -103,7 +99,7 @@ td {
   color: white;
 }
 .table-main td {
-  background-color: white;
+  /* background-color: white; */
   color: blue;
   text-align: center;
   vertical-align: middle;
@@ -111,6 +107,9 @@ td {
 .table-main td[colspan="2"] {
   text-align: left;
   vertical-align: top;
+}
+.col1 {
+  background-color: black;
 }
 .right {
   background-color: antiquewhite;

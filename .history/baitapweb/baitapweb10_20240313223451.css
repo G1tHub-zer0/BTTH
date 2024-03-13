@@ -25,10 +25,6 @@ input[type="text"] {
 td img {
   width: 70%;
   max-height: 100%;
-  vertical-align: middle;
-}
-button {
-  vertical-align: middle;
 }
 .head {
   background: linear-gradient(
@@ -111,6 +107,13 @@ td {
 .table-main td[colspan="2"] {
   text-align: left;
   vertical-align: top;
+}
+.col1 {
+  width: 5px;
+}
+
+.col1 input[type="checkbox"] {
+  margin-left: 0; /* Loại bỏ khoảng cách giữa checkbox và đường viền của ô */
 }
 .right {
   background-color: antiquewhite;

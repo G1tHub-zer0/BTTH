@@ -27,9 +27,6 @@ td img {
   max-height: 100%;
   vertical-align: middle;
 }
-button {
-  vertical-align: middle;
-}
 .head {
   background: linear-gradient(
     to right,

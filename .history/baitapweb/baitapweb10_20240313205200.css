@@ -12,8 +12,13 @@ td {
   text-align: center;
   vertical-align: middle;
   width: 20%;
+  display: flex;
+}
+label {
+  float: right;
 }
 input {
+  float: left;
   outline: none;
 }
 thead {
@@ -22,14 +27,10 @@ thead {
 input[type="text"] {
   margin-right: 5px;
 }
-td img {
-  width: 70%;
-  max-height: 100%;
-  vertical-align: middle;
+input[type="checkbox"] {
+  margin: 0 auto;
 }
-button {
-  vertical-align: middle;
-}
+
 .head {
   background: linear-gradient(
     to right,
@@ -84,17 +85,16 @@ td {
   display: flex;
   justify-content: center;
 }
-.table-main {
+.table-main table {
   width: 500px;
   height: 200px;
-  margin: 10px 5px 5px 5px;
 }
 .table-main table,
 td {
   border: 1px solid red;
   border-collapse: collapse;
 }
-.table-main thead {
+.table-add thead {
   background-image: linear-gradient(
     to top,
     white,
@@ -102,15 +102,22 @@ td {
   );
   color: white;
 }
-.table-main td {
+.table-add td {
   background-color: white;
   color: blue;
   text-align: center;
   vertical-align: middle;
 }
-.table-main td[colspan="2"] {
+.table-add td[colspan="2"] {
   text-align: left;
   vertical-align: top;
+}
+.table-add {
+  margin: 10px 5px 5px 5px;
+}
+td img {
+  width: 70%;
+  max-height: 100%;
 }
 .right {
   background-color: antiquewhite;

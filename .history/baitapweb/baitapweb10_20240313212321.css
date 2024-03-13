@@ -13,7 +13,11 @@ td {
   vertical-align: middle;
   width: 20%;
 }
+label {
+  float: right;
+}
 input {
+  float: left;
   outline: none;
 }
 thead {
@@ -25,10 +29,6 @@ input[type="text"] {
 td img {
   width: 70%;
   max-height: 100%;
-  vertical-align: middle;
-}
-button {
-  vertical-align: middle;
 }
 .head {
   background: linear-gradient(
@@ -84,10 +84,9 @@ td {
   display: flex;
   justify-content: center;
 }
-.table-main {
+.table-main table {
   width: 500px;
   height: 200px;
-  margin: 10px 5px 5px 5px;
 }
 .table-main table,
 td {
@@ -111,6 +110,12 @@ td {
 .table-main td[colspan="2"] {
   text-align: left;
   vertical-align: top;
+}
+.table-main {
+  margin: 10px 5px 5px 5px;
+}
+td input[type="checkbox"] {
+  background-color: aqua;
 }
 .right {
   background-color: antiquewhite;

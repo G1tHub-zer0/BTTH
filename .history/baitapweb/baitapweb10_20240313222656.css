@@ -13,6 +13,9 @@ td {
   vertical-align: middle;
   width: 20%;
 }
+label {
+  float: right;
+}
 input {
   outline: none;
 }
@@ -25,10 +28,6 @@ input[type="text"] {
 td img {
   width: 70%;
   max-height: 100%;
-  vertical-align: middle;
-}
-button {
-  vertical-align: middle;
 }
 .head {
   background: linear-gradient(
