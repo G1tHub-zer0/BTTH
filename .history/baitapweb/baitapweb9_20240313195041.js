@@ -38,13 +38,10 @@ form.addEventListener("submit", (event) => {
     "fileNameInput"
   ).value;
 
-  const existingRows = document.querySelectorAll(
-    ".table-list tbody tr"
-  );
+  const existingRows = document.querySelectorAll(".table-list table tbody tr");
   let studentExists = false;
   existingRows.forEach((row) => {
-    const currentMasv =
-      row.children[1].textContent;
+    const currentMasv = row.children[1].textContent;
     if (currentMasv === masvInput) {
       row.children[2].textContent = nameInput;
       row.children[3].textContent = ngaysinhInput;
@@ -60,28 +57,26 @@ form.addEventListener("submit", (event) => {
     const sttCell = document.createElement("td");
     const masvCell = document.createElement("td");
     const nameCell = document.createElement("td");
-    const ngaysinhCell =
-      document.createElement("td");
+    const ngaysinhCell = document.createElement("td");
     const imgCell = document.createElement("td");
 
-    sttCell.textContent = latestSTT;
-    masvCell.textContent = masvInput;
-    nameCell.textContent = nameInput;
-    ngaysinhCell.textContent = ngaysinhInput;
-    imgCell.textContent = imgInput;
+  sttCell.textContent = latestSTT;
+  masvCell.textContent = masvInput;
+  nameCell.textContent = nameInput;
+  ngaysinhCell.textContent = ngaysinhInput;
+  imgCell.textContent = imgInput;
 
-    newRow.appendChild(sttCell);
-    newRow.appendChild(masvCell);
-    newRow.appendChild(nameCell);
-    newRow.appendChild(ngaysinhCell);
-    newRow.appendChild(imgCell);
+  newRow.appendChild(sttCell);
+  newRow.appendChild(masvCell);
+  newRow.appendChild(nameCell);
+  newRow.appendChild(ngaysinhCell);
+  newRow.appendChild(imgCell);
 
-    const tableBody = document.querySelector(
-      ".table-list tbody"
-    );
-    tableBody.appendChild(newRow);
-  }
+  const tableBody = document.querySelector(
+    ".table-list tbody"
+  );
 
+  tableBody.appendChild(newRow);
   alert("Đăng ký thành công!");
   form.reset();
 });

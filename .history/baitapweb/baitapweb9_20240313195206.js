@@ -39,7 +39,7 @@ form.addEventListener("submit", (event) => {
   ).value;
 
   const existingRows = document.querySelectorAll(
-    ".table-list tbody tr"
+    ".table-list table tbody tr"
   );
   let studentExists = false;
   existingRows.forEach((row) => {
