@@ -1,9 +1,6 @@
-window.onload = () => {
+window.onload = function () {
   let deleteButton =
-    document.querySelector(".delete");
-  let deleteButton2 = document.querySelector(
-    ".col-2 .btn .delete"
-  );
+    document.querySelectorAll(".delete");
   let checkAllButton =
     document.querySelector(".check");
   let clearAllButton =
@@ -11,26 +8,23 @@ window.onload = () => {
   let checkboxes =
     document.querySelectorAll(".object");
 
-  deleteButton.addEventListener(
-    "click",
-    function () {
-      checkboxes.forEach(function (checkbox) {
-        if (checkbox.checked) {
+  deleteButtons.forEach(function (button, index) {
+    button.addEventListener("click", function () {
+      checkboxes.forEach(function (
+        checkbox,
+        checkboxIndex
+      ) {
+        if (index === 0 && checkbox.checked) {
+          checkbox.closest("tr").remove();
+        } else if (
+          index === 1 &&
+          checkbox.checked
+        ) {
           checkbox.closest("tr").remove();
         }
       });
-    }
-  );
-  deleteButton2.addEventListener(
-    "click",
-    function () {
-      checkboxes.forEach(function (checkbox) {
-        if (checkbox.checked) {
-          checkbox.closest("tr").remove();
-        }
-      });
-    }
-  );
+    });
+  });
 
   checkAllButton.addEventListener(
     "click",

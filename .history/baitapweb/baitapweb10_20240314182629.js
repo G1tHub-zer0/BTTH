@@ -21,16 +21,6 @@ window.onload = () => {
       });
     }
   );
-  deleteButton2.addEventListener(
-    "click",
-    function () {
-      checkboxes.forEach(function (checkbox) {
-        if (checkbox.checked) {
-          checkbox.closest("tr").remove();
-        }
-      });
-    }
-  );
 
   checkAllButton.addEventListener(
     "click",
