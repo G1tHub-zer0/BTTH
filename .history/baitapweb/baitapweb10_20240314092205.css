@@ -28,7 +28,6 @@ td img {
 }
 button {
   vertical-align: middle;
-  margin-right: 5px;
 }
 .head {
   background: linear-gradient(
@@ -157,6 +156,7 @@ td {
   margin-left: 20px;
 }
 
+/* Chỉnh css cho checkbox */
 .input-container {
   display: block;
   position: relative;
@@ -221,7 +221,9 @@ td {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+/* Chỉnh css cho checkbox */
 
+/* Chỉnh css cho cột đầu tiên (nên thêm class để chỉnh css) */
 tr td.col-2 {
   width: 50%;
 }
@@ -232,3 +234,6 @@ tr td.col-2 .btn {
   align-items: center;
   justify-content: center;
 }
+/* Fix cột đầu vì cột đầu hàng 1 content dài và ban đầu có css td có width: 20% ảnh hưởng toàn bộ cột nên vỡ layout
+    Xoá đoạn td có width: 20% thì layout sẽ như thưởng, thêm css cho các hàng chỉ có 2 cột để dễ nhìn
+*/

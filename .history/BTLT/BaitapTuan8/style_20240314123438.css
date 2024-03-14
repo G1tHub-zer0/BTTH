@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1280px;
+}
+table {
+  width: 100%;
+}
+label {
+  float: left;
+}
+input {
+  float: left;
+  height: 80%;
+}
+input[type="text"] {
+  margin-right: 5px;
+}
+button {
+  display: flex;
+  align-items: center;
+}
+select {
+  width: 50%;
+}
+.container table {
+  width: 500px;
+  height: 100%;
+}
+.container table,
+td,
+th {
+  border: 1px solid red;
+  border-collapse: collapse;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column;
+  gap: 20px;
+}
+.table-body td {
+  width: 20%;
+}

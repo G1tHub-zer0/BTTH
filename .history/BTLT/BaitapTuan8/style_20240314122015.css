@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1280px;
+}
+table {
+  width: 100%;
+}
+label {
+  float: left;
+}
+input {
+  float: left;
+}
+input,
+option {
+  height: 80%;
+}
+input[type="text"] {
+  margin-right: 5px;
+}
+button {
+  display: flex;
+  align-items: center;
+}
+.table-main table {
+  width: 500px;
+  height: 100%;
+}
+.table-main table,
+td {
+  border: 1px solid red;
+  border-collapse: collapse;
+}
+.table-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
