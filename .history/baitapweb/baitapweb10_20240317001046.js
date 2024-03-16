@@ -1,9 +1,9 @@
 window.onload = () => {
   let deleteButton =
-    document.querySelector(".delete");
-  let deleteButton2 = document.querySelector(
-    ".btn .delete"
-  );
+    document.querySelectorAll(".delete");
+  // let deleteButton2 = document.querySelector(
+  //   ".btn .delete"
+  // );
   let checkAllButton =
     document.querySelector(".check");
   let clearAllButton =
@@ -23,10 +23,10 @@ window.onload = () => {
     "click",
     deleteCheckbox
   );
-  deleteButton2.addEventListener(
-    "click",
-    deleteCheckbox
-  );
+  // deleteButton2.addEventListener(
+  //   "click",
+  //   deleteCheckbox
+  // );
 
   checkAllButton.addEventListener(
     "click",

@@ -2,7 +2,7 @@ window.onload = () => {
   let deleteButton =
     document.querySelector(".delete");
   let deleteButton2 = document.querySelector(
-    ".btn .delete"
+    ".col-2 .btn .delete"
   );
   let checkAllButton =
     document.querySelector(".check");

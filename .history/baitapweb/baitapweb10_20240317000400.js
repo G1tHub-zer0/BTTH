@@ -1,8 +1,8 @@
 window.onload = () => {
   let deleteButton =
-    document.querySelector(".delete");
+    document.querySelectorAll(".delete");
   let deleteButton2 = document.querySelector(
-    ".btn .delete"
+    ".col-2 .btn .delete"
   );
   let checkAllButton =
     document.querySelector(".check");
@@ -11,7 +11,7 @@ window.onload = () => {
   let checkboxes =
     document.querySelectorAll(".object");
 
-  const deleteCheckbox = () => {
+  let deleteCheckbox = () => {
     checkboxes.forEach((checkbox) => {
       if (checkbox.checked) {
         checkbox.closest("tr").remove();
