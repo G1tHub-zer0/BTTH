@@ -3,4 +3,123 @@ body {
   padding: 0;
   box-sizing: border-box;
   max-width: 1280px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table,
+th,
+td {
+  border: 1px solid purple;
+}
+th {
+  color: white;
+}
+tr {
+  color: blue;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline;
+}
+h4 {
+  font-weight: 300;
+  margin: 0;
+  color: orange;
+}
+p {
+  display: inline;
+  margin: 0;
+}
+hr {
+  height: 0.5px;
+  background-color: red;
+}
+b {
+  color: orange;
+  font-weight: 300;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+}
+.head img {
+  width: 50%;
+  height: 100px;
+}
+.main {
+  display: grid;
+  grid-template-columns: 0.75fr 3.5fr 0.75fr;
+  gap: 10px;
+}
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  height: 200%;
+}
+.menu {
+  text-align: left;
+  color: white;
+  background-color: aqua;
+}
+.weather {
+  margin-bottom: 20px;
+}
+.weather th {
+  background-color: blue;
+  color: white;
+}
+.weather tr {
+  background-color: aqua;
+}
+.money th {
+  background-color: green;
+  color: white;
+}
+.money tr {
+  background-color: white;
+}
+.center a {
+  text-decoration: underline;
+}
+.p2,
+.p3 {
+  display: flex;
+}
+.p2 table {
+  width: 150%;
+}
+.p2 table,
+.p2 th,
+.p2 td,
+.p3 table,
+.p3 th,
+.p3 td {
+  border: none;
+}
+.p2 td[rowspan] {
+  width: 30%;
+}
+.p2 th {
+  background: linear-gradient(to top, white, purple);
+}
+.p3 table {
+  width: 190%;
+}
+.p3 td[rowspan] {
+  width: 30%;
+}
+.p3 th {
+  background: linear-gradient(to top, white, pink);
+}
+.link {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
