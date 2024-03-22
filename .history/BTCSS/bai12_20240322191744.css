@@ -6,20 +6,19 @@ body {
   padding: 0;
 }
 h1 {
-  color: transparent;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: transparent; /* Làm chữ trở thành trong suốt */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Áp dụng shadow mờ */
 }
 p {
   margin-top: 30px;
 }
 .container {
-  position: relative;
   margin-top: 100px;
 }
 .ribbon {
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 5;
+  left: 0;
   background-color: #ff6347;
   color: #fff;
   padding: 5px 10px;

@@ -5,17 +5,17 @@ body {
 }
 
 .menu {
-  width: 120px;
+  width: 120px; /* Độ rộng của menu */
   list-style-type: none;
   margin: 0;
   padding: 0;
   background-color: blue;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Hiển thị các mục theo chiều dọc */
 }
 
 .menu li {
-  position: relative;
+  /* Không cần sử dụng float nữa */
 }
 
 .menu li a {
@@ -37,8 +37,8 @@ body {
   position: absolute;
   background-color: #333;
   min-width: 160px;
-  top: 0;
-  left: 100%;
+  left: 120px; /* Đặt submenu bắt đầu từ phía bên phải của menu */
+  top: 0; /* Đặt submenu ở vị trí ban đầu của menu cha */
 }
 
 .menu li:hover .submenu {

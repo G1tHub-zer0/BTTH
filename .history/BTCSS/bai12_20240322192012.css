@@ -18,8 +18,8 @@ p {
 }
 .ribbon {
   position: absolute;
-  top: 1px;
-  left: 1px;
+  top: 10px;
+  left: 2px;
   background-color: #ff6347;
   color: #fff;
   padding: 5px 10px;

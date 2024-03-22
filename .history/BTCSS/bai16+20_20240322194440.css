@@ -3,21 +3,16 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
 .menu {
-  width: 120px;
+  width: 100px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   background-color: blue;
-  display: flex;
-  flex-direction: column;
 }
-
 .menu li {
-  position: relative;
+  float: left;
 }
-
 .menu li a {
   display: block;
   color: red;
@@ -30,15 +25,11 @@ body {
   background-color: #007bff;
   color: white;
 }
-
 .submenu {
-  list-style-type: none;
   display: none;
   position: absolute;
   background-color: #333;
   min-width: 160px;
-  top: 0;
-  left: 100%;
 }
 
 .menu li:hover .submenu {
@@ -52,7 +43,6 @@ body {
 .submenu li a {
   padding: 12px 16px;
 }
-
 .submenu li a:hover {
   background-color: #ddd;
 }

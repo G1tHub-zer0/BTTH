@@ -5,17 +5,18 @@ body {
 }
 
 .menu {
-  width: 120px;
+  width: 120px; /* Độ rộng của menu */
   list-style-type: none;
   margin: 0;
   padding: 0;
   background-color: blue;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Hiển thị các mục theo chiều dọc */
 }
 
 .menu li {
-  position: relative;
+  /* Không cần sử dụng float nữa */
+  position: relative; /* Cần thiết để submenu định vị dựa trên menu cha */
 }
 
 .menu li a {

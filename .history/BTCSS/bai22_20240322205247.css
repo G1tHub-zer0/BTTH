@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: darkgrey;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.left {
+  padding: 10px;
+  background-color: antiquewhite;
+}
+.main {
+  padding: 10px;
+}
+.floatLeft {
+  float: left;
+  margin-right: 10px;
+}
