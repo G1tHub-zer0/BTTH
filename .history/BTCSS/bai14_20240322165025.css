@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 300px;
+  height: auto;
+  background: #6fac21;
+  opacity: 0.8;
+  border-radius: 10px;
+  transition: all 2s linear;
+  margin: 50px 50px;
+  text-align: justify;
+  border-bottom: dashed;
+  border-left: double;
+  border-right: dashed;
+  border-top: double;
+  border-color: red;
+}

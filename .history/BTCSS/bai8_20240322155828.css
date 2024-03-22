@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16;
+}
+p {
+  margin: 0 auto;
+  width: 40%;
+  height: 200px;
+}
+.a {
+  text-align: center;
+  width: 20%;
+  height: 200px;
+  border: 10px solid;
+  border-color: #35c226 #f7c200 #4493ad #df127b;
+}
+.b {
+  text-align: center;
+  width: 20%;
+  height: 200px;
+  border: 10px solid dotted groove double;
+  border-color: #35c226 #f7c200 #4493ad #df127b;
+}

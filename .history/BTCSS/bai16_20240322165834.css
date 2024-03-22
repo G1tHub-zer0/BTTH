@@ -1,0 +1,20 @@
+.menu {
+  width: 200px; /* Độ rộng của menu */
+}
+
+.menu a {
+  background-color: #f2f2f2; /* Màu nền của mỗi mục menu */
+  color: black; /* Màu chữ */
+  display: block; /* Hiển thị dưới dạng khối */
+  padding: 12px; /* Khoảng cách giữa các mục */
+  text-decoration: none; /* Xóa gạch chân */
+}
+
+.menu a:hover {
+  background-color: #ddd; /* Màu nền khi hover */
+}
+
+.menu a.active {
+  background-color: #007bff; /* Màu nền của mục đang được chọn */
+  color: white; /* Màu chữ của mục đang được chọn */
+}

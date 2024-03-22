@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16;
+}
+.container-1,
+.container-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+}

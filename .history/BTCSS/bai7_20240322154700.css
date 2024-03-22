@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16;
+}
+.container {
+  -webkit-column-count: 3;
+  -webkit-column-gap: 40px;
+  -webkit-column-rule: 1px solid lightblue;
+  /* column-count: 3;
+  column-gap: 30px;
+  column-rule: 1px solid lightblue; */
+}
