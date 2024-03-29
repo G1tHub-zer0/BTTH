@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .calculator input[type="button"] {
+            width: 70px;
+            height: 40px;
+            margin: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .calculator input[type="text"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 10px;
+            padding: 5px;
+            font-size: 18px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <input type="button" value="7" onclick="addToDisplay('7')">
+        <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="9" onclick="addToDisplay('9')">
+        <input type="button" value="/" onclick="addToDisplay('/')">
+        <br>
+        <input type="button" value="4" onclick="addToDisplay('4')">
+        <input type="button" value="5" onclick="addToDisplay('5')">
+        <input type="button" value="6" onclick="addToDisplay('6')">
+        <input type="button" value="*" onclick="addToDisplay('*')">
+        <br>
+        <input type="button" value="1" onclick="addToDisplay('1')">
+        <input type="button" value="2" onclick="addToDisplay('2')">
+        <input type="button" value="3" onclick="addToDisplay('3')">
+        <input type="button" value="-" onclick="addToDisplay('-')">
+        <br>
+        <input type="button" value="0" onclick="addToDisplay('0')">
+        <input type="button" value="." onclick="addToDisplay('.')">
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="+" onclick="addToDisplay('+')">
+        <br>
+        <input type="button" value="Clear" onclick="clearDisplay()">
+        <input type="button" value="^2" onclick="square()">
+        <input type="button" value="√" onclick="squareRoot()">
+    </div>
+
+    <script>
+        function addToDisplay(value) {
+            document.querySelector('#display').value += value;
+        }
+
+        function calculate() {
+            try {
+                document.querySelector('#display').value = eval(document.querySelector('#display').value);
+            } catch (error) {
+                document.querySelector('#display').value = 'Error';
+            }
+        }
+
+        function clearDisplay() {
+            document.querySelector('#display').value = '';
+        }
+
+        function square() {
+            document.querySelector('#display').value = Math.pow(Number(document.querySelector('#display').value), 2);
+        }
+
+        function squareRoot() {
+            document.querySelector('#display').value = Math.sqrt(parseFloat(document.querySelector('#display').value));
+        }
+    </script>
+</body>
+
+</html>
