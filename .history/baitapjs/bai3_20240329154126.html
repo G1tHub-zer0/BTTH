@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        let today = new Date();
+        let currentYear = today.getFullYear();
+
+        let birthYear;
+
+        do {
+            birthYear = Number(prompt("Nhập năm sinh của bạn (dương lịch): "));
+
+            // Input validation: Ensure non-negative numeric input
+            if (isNaN(birthYear) || birthYear < 0) {
+                alert("Năm sinh phải là một số dương hợp lệ.");
+            } else if (birthYear > currentYear) {
+                alert("Năm sinh không thể lớn hơn năm hiện tại.");
+            }
+        } while (isNaN(birthYear) || birthYear < 0 || birthYear > currentYear);
+
+        let age = currentYear - birthYear;
+
+        console.log("Tuổi của bạn là:", age); // More user-friendly output
+
+    </script>
+</body>
+
+</html>

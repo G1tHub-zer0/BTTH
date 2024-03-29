@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        #image-container {
+            margin: 50px auto;
+            width: 500px;
+            height: 500px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #333;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="image" src="image1.jpg" alt="Random Image">
+    <button id="start" onclick="start()">Start</button>
+    <button id="stop" onclick="stop()">Stop</button>
+    <script>
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
+        let intervalId;
+
+        function start() {
+            intervalId = setInterval(changeImage, 3000);
+            document.getElementById("start").disabled = true;
+            document.getElementById("stop").disabled = false;
+        }
+
+        function stop() {
+            clearInterval(intervalId);
+            document.getElementById("start").disabled = false;
+            document.getElementById("stop").disabled = true;
+        }
+
+        function changeImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const randomImage = images[randomIndex];
+            document.getElementById("image").src = randomImage;
+        }
+    </script>
+</body>
+
+</html>

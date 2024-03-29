@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+</head>
+
+<body>
+    <img id="image" src="image1.jpg" alt="Random Image">
+    <button id="start" onclick="start()">Start</button>
+    <button id="stop" onclick="stop()">Stop</button>
+    <script>
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg"]; // Danh sách hình ảnh
+        let intervalId;
+
+        function start() {
+            intervalId = setInterval(changeImage, 3000); // Cập nhật hình ảnh mỗi 3 giây
+            document.getElementById("start").disabled = true; // Vô hiệu hóa nút Start
+            document.getElementById("stop").disabled = false; // Kích hoạt nút Stop
+        }
+
+        function stop() {
+            clearInterval(intervalId); // Dừng cập nhật hình ảnh
+            document.getElementById("start").disabled = false; // Kích hoạt nút Start
+            document.getElementById("stop").disabled = true; // Vô hiệu hóa nút Stop
+        }
+
+        function changeImage() {
+            const randomIndex = Math.floor(Math.random() * images.length); // Lấy vị trí ngẫu nhiên
+            const randomImage = images[randomIndex]; // Lấy hình ảnh ngẫu nhiên
+            document.getElementById("image").src = randomImage; // Hiển thị hình ảnh ngẫu nhiên
+        }
+    </script>
+</body>
+
+</html>

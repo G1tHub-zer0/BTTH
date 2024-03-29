@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+    Dưới đây là mã JavaScript để tạo đồng hồ điện tử trên trang web có định dạng như bạn yêu cầu:
+
+    HTML
+    <!DOCTYPE html>
+    <html lang="vi">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Đồng hồ điện tử</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                text-align: center;
+            }
+
+            #clock {
+                font-size: 24px;
+                font-weight: bold;
+                color: #333;
+                margin: 50px auto;
+                padding: 20px;
+                border: 2px solid #ddd;
+                border-radius: 10px;
+                width: 300px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+
+            #time {
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+
+            #date {
+                font-size: 24px;
+            }
+        </style>
+
+    <body>
+        <div id="clock">
+            <p id="day"></p>
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const hours = now.getHours();
+                const minutes = now.getMinutes();
+                const seconds = now.getSeconds();
+                const day = now.getDate();
+                const month = now.getMonth() + 1;
+                const year = now.getFullYear();
+                const ampm = hours >= 12 ? "PM" : "AM";
+
+                // Định dạng thời gian
+                const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+                const formattedDate = `${day.toString().padStart(2, "0")}/${month.toString().padStart(2, "0")}/${year}`;
+                const formattedDay = getDayName(now.getDay());
+
+                // Hiển thị thời gian
+                document.getElementById("day").textContent = formattedDay;
+                document.getElementById("date").textContent = `Ngày ${formattedDate}`;
+                document.getElementById("time").textContent = `Bây giờ là ${formattedTime} ${ampm}`;
+            }
+
+            // Cập nhật đồng hồ mỗi giây
+            setInterval(updateClock, 1000);
+
+            // Khởi động đồng hồ
+            updateClock();
+
+            function getDayName(dayNumber) {
+                switch (dayNumber) {
+                    case 0:
+                        return "Chủ nhật";
+                    case 1:
+                        return "Thứ Hai";
+                    case 2:
+                        return "Thứ Ba";
+                    case 3:
+                        return "Thứ Tư";
+                    case 4:
+                        return "Thứ Năm";
+                    case 5:
+                        return "Thứ Sáu";
+                    case 6:
+                        return "Thứ Bảy";
+                    default:
+                        return "";
+                }
+            }
+        </script>
+    </body>
+
+    </html>
+
+    </body>
+
+</html>

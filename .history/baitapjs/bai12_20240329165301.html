@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .image {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .image:not(:first-child) {
+            margin-left: 10vw;
+        }
+
+        .start-button {
+            width: 100px;
+            height: 40px;
+            background-color: #0277bd;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .stop-button {
+            width: 100px;
+            height: 40px;
+            background-color: #0277bd;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+<body>
+    <div class="container">
+        <div class="image"></div>
+    </div>
+    <div class="start-button" id="start-button">Start</div>
+    <div class="stop-button" id="stop-button">Stop</div>
+    <script>
+        const images
+
+</head >
+
+            <body>
+                <h1>Hiển thị hình ảnh ngẫu nhiên</h1>
+                <div id="image-container">
+                    <img id="image" src="">
+                </div>
+                <div id="buttons">
+                    <button id="start">Start</button>
+                    <button id="stop">Stop</button>
+                </div>
+                <script>
+                    const imageContainer = document.getElementById("image-container");
+                    const image = document.getElementById("image");
+                    const startButton = document.getElementById("start");
+                    const stopButton = document.getElementById("stop");
+
+                    let intervalId;
+
+                    function getRandomImage() {
+            const url = "https://source.unsplash.com/random";
+                    image.src = url;
+        }
+
+        startButton.addEventListener("click", () => {
+                        getRandomImage();
+                    intervalId = setInterval(getRandomImage, 3000);
+                    startButton.disabled = true;
+                    stopButton.disabled = false;
+        });
+
+        stopButton.addEventListener("click", () => {
+                        clearInterval(intervalId);
+                    startButton.disabled = false;
+                    stopButton.disabled = true;
+        });
+
+                    getRandomImage();
+    </script>
+</body>
+
+</html>
