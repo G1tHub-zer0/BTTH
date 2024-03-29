@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        function validateInput(input, type) {
+            let regex;
+            switch (type) {
+                case 'IP':
+                    regex = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;
+                    break;
+                case 'URL':
+                    regex = /^(http|https):\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
+                    break;
+                case 'ZipCode':
+                    regex = /^\d{5}(?:-\d{4})?$/;
+                    break;
+                default:
+                    return false;
+            }
+            return regex.test(input);
+        }
+
+        const ipAddress = "192.168.0.1";
+        console.log(`Địa chỉ IP ${ipAddress} có hợp lệ không? ${validateInput(ipAddress, 'IP')}`);
+
+        const url = "https://www.example.com";
+        console.log(`URL ${url} có hợp lệ không? ${validateInput(url, 'URL')}`);
+
+        const zipCode = "12345";
+        console.log(`US Zip Code ${zipCode} có hợp lệ không? ${validateInput(zipCode, 'ZipCode')}`);
+
+    </script>
+</body>
+
+</html>

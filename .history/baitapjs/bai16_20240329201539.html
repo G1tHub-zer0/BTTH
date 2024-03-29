@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        function validateInput(input, type) {
+            let regex;
+            switch (type) {
+                case 'IP':
+                    regex = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/;
+                    break;
+                case 'URL':
+                    regex = /^(http|https):\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
+                    break;
+                case 'ZipCode':
+                    regex = /^\d{5}(?:-\d{4})?$/;
+                    break;
+                default:
+                    return false;
+            }
+            return regex.test(input);
+        }
+
+        const type = prompt('Nhập loại địa chỉ của bạn: ');
+        const address = prompt();
+        if (validateInput(address)) {
+            console.log(`${type} ${address} hợp lệ `);
+        } else {
+            console.log(`${type} ${address} không hợp lệ `);
+        }
+    </script>
+</body>
+
+</html>
