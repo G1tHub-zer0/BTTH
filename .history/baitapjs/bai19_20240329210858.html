@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #content {
+            margin-top: 50px;
+        }
+
+        #backgroundColorInput,
+        #textareaBackgroundColorInput,
+        #textColorInput {
+            margin-bottom: 20px;
+        }
+
+        #changeButton {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <textarea id="textInput" cols="50" rows="10" placeholder="Nhập nội dung ở đây..."></textarea>
+        <br>
+        <div class="container">
+            <input type="color" id="backgroundColorInput" value="#ffffff"> Màu nền
+            <br>
+            <input type="color" id="textareaBackgroundColorInput" value="#ffffff"> Màu nền textarea
+            <br>
+            <input type="color" id="textColorInput" value="#000000"> Màu văn bản
+            <br>
+            <button id="changeButton">Thay đổi màu</button>
+        </div>
+    </div>
+
+    <script>
+        const changeButton = document.querySelector('#changeButton');
+        const textInput = document.querySelector('#textInput');
+        const backgroundColorInput = document.querySelector('#backgroundColorInput');
+        const textareaBackgroundColorInput = document.querySelector('#textareaBackgroundColorInput');
+        const textColorInput = document.querySelector('#textColorInput');
+
+        changeButton.addEventListener('click', function () {
+            const backgroundColor = backgroundColorInput.value;
+            const textColor = textColorInput.value;
+
+            document.body.style.backgroundColor = backgroundColor;
+            textInput.style.color = textColor;
+        });
+    </script>
+</body>
+
+</html>
