@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký môn học</title>
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            background-color: #3B71FE;
+            color: white;
+            padding: 9px 40px;
+            font-size: 16px;
+            line-height: 1.5;
+            width: fit-content;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Đăng ký môn học</h1>
+    <form id="registrationForm">
+        <label for="fullName">Họ và tên:</label>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <label for="class">Lớp:</label>
+        <select id="class" name="class" required>
+            <option value="">Chọn lớp</option>
+            <option value="12A">12A</option>
+            <option value="12B">12B</option>
+            <option value="12C">12C</option>
+        </select><br><br>
+
+        <label for="subject">Môn học:</label>
+        <select id="subject" name="subject" required>
+            <option value="">Chọn môn học</option>
+            <option value="Toán">Toán</option>
+            <option value="Văn">Văn</option>
+            <option value="Lý">Lý</option>
+            <option value="Hóa">Hóa</option>
+        </select><br><br>
+
+        <label>Loại lớp:</label>
+        <input type="radio" id="theory" name="classType" value="Lý thuyết" required>
+        <label for="theory">Lý thuyết</label>
+        <input type="radio" id="practice" name="classType" value="Thực hành" required>
+        <label for="practice">Thực hành</label><br><br>
+
+        <button type="button" onclick="addRow()">Đăng ký</button>
+    </form>
+
+    <h2>Danh sách đăng ký</h2>
+    <table id="registrationTable">
+        <tr>
+            <th>Họ tên</th>
+            <th>Lớp</th>
+            <th>Môn đăng ký</th>
+            <th>Loại</th>
+        </tr>
+    </table>
+
+    <script>
+        function addRow() {
+            // Lấy giá trị từ form
+            const fullName = document.getElementById('fullName').value;
+            const selectedClass = document.getElementById('class').value;
+            const selectedSubject = document.getElementById('subject').value;
+            const classType = document.querySelector('input[name="classType"]:checked').value;
+
+            // Tạo một dòng mới trong bảng
+            const table = document.getElementById('registrationTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow(table.rows.length);
+
+            // Thêm các ô dữ liệu vào dòng mới
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
+            cell1.innerHTML = fullName;
+            cell2.innerHTML = selectedClass;
+            cell3.innerHTML = selectedSubject;
+            cell4.innerHTML = classType;
+        }
+    </script>
+</body>
+
+</html>
