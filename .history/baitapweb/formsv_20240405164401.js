@@ -9,5 +9,6 @@ form.addEventListener("submit", (event) => {
   const rating = document.querySelector("#rating").value;
 
   alert("Cảm ơn bạn đã phản hồi!");
+
   form.reset();
 });

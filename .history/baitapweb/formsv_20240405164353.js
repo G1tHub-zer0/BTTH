@@ -1,6 +1,6 @@
 const form = document.querySelector("#feedback-form");
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const name = document.querySelector("#name").value;
@@ -9,5 +9,6 @@ form.addEventListener("submit", (event) => {
   const rating = document.querySelector("#rating").value;
 
   alert("Cảm ơn bạn đã phản hồi!");
+
   form.reset();
 });
