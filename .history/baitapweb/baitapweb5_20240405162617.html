@@ -56,7 +56,7 @@
         </form>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', function () {
             const form = document.querySelector('form');
 
             const nameInput = document.querySelector('#name');
@@ -66,12 +66,17 @@
             const submitButton = document.querySelector('button[type="submit"]');
             const resetButton = document.querySelector('button[type="reset"]');
 
-            form.addEventListener('submit', (event) => {
+            form.addEventListener('submit', function (event) {
                 event.preventDefault();
 
                 const name = nameInput.value;
                 const live = liveInput.value;
-                const gender = Array.from(genderInputs).find(input => input.checked).value;
+                let gender = '';
+                genderInputs.forEach(function (input) {
+                    if (input.checked) {
+                        gender = input.value;
+                    }
+                });
                 const songList = songListInput.value;
 
                 console.log('Họ tên:', name);
@@ -79,8 +84,6 @@
                 console.log('Giới tính:', gender);
                 console.log('Danh sách bài hát đăng ký:', songList);
 
-                alert("Gửi thành công - Xem kết quả trong console");
-                form.reset();
             });
         });
     </script>

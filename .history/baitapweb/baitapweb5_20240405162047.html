@@ -56,35 +56,25 @@
         </form>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.querySelector('form');
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('registrationForm');
 
-            const nameInput = document.querySelector('#name');
-            const liveInput = document.querySelector('select[name="live"]');
-            const genderInputs = document.querySelectorAll('input[name="gt"]');
-            const songListInput = document.querySelector('#list-dk');
-            const submitButton = document.querySelector('button[type="submit"]');
-            const resetButton = document.querySelector('button[type="reset"]');
-
-            form.addEventListener('submit', (event) => {
+            form.addEventListener('submit', function (event) {
                 event.preventDefault();
 
-                const name = nameInput.value;
-                const live = liveInput.value;
-                const gender = Array.from(genderInputs).find(input => input.checked).value;
-                const songList = songListInput.value;
+                const name = document.getElementById('name').value;
+                const live = document.getElementById('live').value;
+                const gender = document.querySelector('input[name="gender"]:checked').value;
+                const songList = document.getElementById('songList').value;
 
                 console.log('Họ tên:', name);
                 console.log('Hộ khẩu:', live);
                 console.log('Giới tính:', gender);
                 console.log('Danh sách bài hát đăng ký:', songList);
 
-                alert("Gửi thành công - Xem kết quả trong console");
-                form.reset();
             });
         });
     </script>
-
 </body>
 
 </html>

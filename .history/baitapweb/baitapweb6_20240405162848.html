@@ -84,7 +84,7 @@
         </form>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', function () {
             const form = document.querySelector('form');
 
             const nameInput = document.querySelector('#name');
@@ -95,18 +95,17 @@
             const submitButton = document.querySelector('button[type="submit"]');
             const resetButton = document.querySelector('button[type="reset"]');
 
-            form.addEventListener('submit', (event) => {
+            form.addEventListener('submit', function (event) {
                 event.preventDefault();
 
                 const name = nameInput.value;
                 const live = liveInput.value;
                 const feedbacks = [];
-                feedbackInputs.forEach((input) => {
+                feedbackInputs.forEach(function (input) {
                     if (input.checked) {
                         feedbacks.push(input.value);
                     }
                 });
-
                 const language = Array.from(languageInputs).find(input => input.checked).value;
                 const message = messageInput.value;
 
@@ -116,8 +115,18 @@
                 console.log('Ngôn ngữ:', language);
                 console.log('Nội dung:', message);
 
-                alert("Gửi thành công - Xem kết quả trong console");
-                form.reset();
+            });
+
+            resetButton.addEventListener('click', function () {
+                nameInput.value = '';
+                liveInput.selectedIndex = 0;
+                feedbackInputs.forEach(function (input) {
+                    input.checked = false;
+                });
+                languageInputs.forEach(function (input) {
+                    input.checked = false;
+                });
+                messageInput.value = '';
             });
         });
     </script>

@@ -83,45 +83,6 @@
             </div>
         </form>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.querySelector('form');
-
-            const nameInput = document.querySelector('#name');
-            const liveInput = document.querySelector('select[name="live"]');
-            const feedbackInputs = document.querySelectorAll('input[name="DV"], input[name="SP"], input[name="OT"]');
-            const languageInputs = document.querySelectorAll('input[name="language"]');
-            const messageInput = document.querySelector('#nd');
-            const submitButton = document.querySelector('button[type="submit"]');
-            const resetButton = document.querySelector('button[type="reset"]');
-
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
-
-                const name = nameInput.value;
-                const live = liveInput.value;
-                const feedbacks = [];
-                feedbackInputs.forEach((input) => {
-                    if (input.checked) {
-                        feedbacks.push(input.value);
-                    }
-                });
-
-                const language = Array.from(languageInputs).find(input => input.checked).value;
-                const message = messageInput.value;
-
-                console.log('Họ tên:', name);
-                console.log('Hộ khẩu:', live);
-                console.log('Góp ý về lĩnh vực:', feedbacks.join(', '));
-                console.log('Ngôn ngữ:', language);
-                console.log('Nội dung:', message);
-
-                alert("Gửi thành công - Xem kết quả trong console");
-                form.reset();
-            });
-        });
-    </script>
-
 </body>
 
 </html>
