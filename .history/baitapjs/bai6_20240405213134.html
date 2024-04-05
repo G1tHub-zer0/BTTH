@@ -59,8 +59,8 @@
         <input type="button" value="^2" onclick="square()">
         <input type="button" value="√" onclick="squareRoot()">
         <br>
-        <input type="button" value="7" onclick="addToDisplay('7')">
         <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="7" onclick="addToDisplay('7')">
         <input type="button" value="/" onclick="addToDisplay('/')">
         <br>
         <input type="button" value="5" onclick="addToDisplay('5')">
@@ -80,6 +80,7 @@
         <input type="button" value="=" onclick="calculate()">
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         function addToDisplay(value) {
             document.querySelector('#display').value += value;

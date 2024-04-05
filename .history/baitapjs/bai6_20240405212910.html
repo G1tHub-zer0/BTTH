@@ -80,30 +80,61 @@
         <input type="button" value="=" onclick="calculate()">
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        function addToDisplay(value) {
-            document.querySelector('#display').value += value;
-        }
+        // function addToDisplay(value) {
+        //     document.querySelector('#display').value += value;
+        // }
 
-        function calculate() {
-            try {
-                document.querySelector('#display').value = eval(document.querySelector('#display').value);
-            } catch (error) {
-                document.querySelector('#display').value = 'Error';
-            }
-        }
+        // function calculate() {
+        //     try {
+        //         document.querySelector('#display').value = eval(document.querySelector('#display').value);
+        //     } catch (error) {
+        //         document.querySelector('#display').value = 'Error';
+        //     }
+        // }
 
-        function clearDisplay() {
-            document.querySelector('#display').value = '';
-        }
+        // function clearDisplay() {
+        //     document.querySelector('#display').value = '';
+        // }
 
-        function square() {
-            document.querySelector('#display').value = Math.pow(Number(document.querySelector('#display').value), 2);
-        }
+        // function square() {
+        //     document.querySelector('#display').value = Math.pow(Number(document.querySelector('#display').value), 2);
+        // }
 
-        function squareRoot() {
-            document.querySelector('#display').value = Math.sqrt(Number(document.querySelector('#display').value));
-        }
+        // function squareRoot() {
+        //     document.querySelector('#display').value = Math.sqrt(Number(document.querySelector('#display').value));
+        // }
+
+        $(document).ready(function () {
+            $('.numBtn').click(function () {
+                $('#display').val($('#display').val() + $(this).val());
+            });
+
+            $('#clear').click(function () {
+                $('#display').val('');
+            });
+
+            $('.operatorBtn').click(function () {
+                $('#display').val($('#display').val() + $(this).val());
+            });
+
+            $('#calculate').click(function () {
+                try {
+                    $('#display').val(eval($('#display').val()));
+                } catch (error) {
+                    $('#display').val('Error');
+                }
+            });
+
+            $('#square').click(function () {
+                $('#display').val(Math.pow(Number($('#display').val()), 2));
+            });
+
+            $('#squareRoot').click(function () {
+                $('#display').val(Math.sqrt(Number($('#display').val())));
+            });
+        });
     </script>
 </body>
 
