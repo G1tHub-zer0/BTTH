@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMDT17F_Ca2_NguyenQuocKhang</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: aqua;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-bottom: 7px dotted white;
+            position: relative;
+        }
+
+        span {
+            text-shadow: 0 0 10px blue;
+            font-weight: 900;
+            font-size: 26px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: 600;
+            color: white;
+        }
+
+        img {
+            width: 70%;
+            height: 50%;
+        }
+
+        label {
+            float: left;
+        }
+
+        input {
+            float: left;
+        }
+
+        button {
+            border: 2px dashed black;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 5px;
+            margin-left: 20px;
+            gap: 10px;
+        }
+
+        .li-child {
+            position: absolute;
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .title {
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            font-weight: 900;
+            font-size: 26px;
+            text-align: left;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+            justify-content: space-between;
+        }
+
+        .form-label {
+            display: inline-block;
+            margin-bottom: 5px;
+            width: 20%;
+        }
+
+        .form-input {
+            display: inline-block;
+            width: calc(70% - 10px);
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            margin-left: 180px;
+        }
+
+        footer {
+            margin-top: 30px;
+            border-top: 7px dotted white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .footer-copyright {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .footer-contact-info {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li class="dropdown">
+                    <a href="" onclick="toggleDropdown(event)">Product</a>
+                    <ul class="li-child">
+                        <li><a href="">Product Development</a></li>
+                        <li><a href="">Product Marketing</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Service</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <span>Blue World</span>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left">
+                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQPEPs2_5wSTIjIZc9-3Q0FZGMlz0Le7AAJZYD5ixYSu4Stt5WP"
+                    alt="img">
+                <p class="title">
+                    Happiness on Earth
+                </p>
+                <p style="opacity: 0.8; font-size: 20px; float: left;">Inspriring destinations within your reach</p>
+            </div>
+            <div class="right">
+                <h2>Your contact information</h2>
+                <p>Start your travel planning right now with our on-line tour registration form. Just tell us a little
+                    about yourself and your group and one of our travel experts will contact you to create the perfect
+                    tour package custom built for your group's needs</p>
+                <form action="#">
+                    <div class="form-group">
+                        <label class="form-label" for="title">Title:</label>
+                        <select id="title" name="title" class="form-input">
+                            <option value="Mr">Mr.</option>
+                            <option value="Mrs">Mrs.</option>
+                            <option value="Ms">Ms.</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">Full Name*</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" placeholder="First Name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="mailingAddress">Mailing Address</label>
+                        <input type="text" id="mailingAddress" name="mailingAddress" class="form-input"
+                            placeholder="Mailing Address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="city">City</label>
+                        <input type="text" id="city" name="city" class="form-input" placeholder="City" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="country">Country</label>
+                        <input type="text" id="country" name="country" class="form-input" placeholder="Country"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="questions">Specific questions or requests about your
+                            tour</label>
+                        <textarea id="questions" name="questions" class="form-input" rows="5" placeholder="Specific questions or requests about your
+                            tour" required></textarea>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copyright">
+                ©2016 Blue World Tours. All rights reserved.
+            </div>
+
+            <div class="footer-contact-info">
+                Contact information: <strong>Student Name</strong> | <strong>Student ID </strong>Testing date:
+                <strong>16 Sept 2016</strong>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+        function toggleDropdown(event) {
+            event.preventDefault();
+            const dropdownMenu = event.target.nextElementSibling;
+            if (dropdownMenu.classList.contains('show')) {
+                dropdownMenu.classList.remove('show');
+            } else {
+                dropdownMenu.classList.add('show');
+            }
+        }
+    </script>
+</body>
+
+</html>

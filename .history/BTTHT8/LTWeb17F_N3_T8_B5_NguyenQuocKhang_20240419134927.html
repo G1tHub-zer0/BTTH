@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Bai 5</title>
+    <style></style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Form đăng ký</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="firstName">Họ:</label>
+                <input type="text" id="firstName" name="firstName" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Tên:</label>
+                <input type="text" id="lastName" name="lastName" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Giới tính:</label>
+                <select id="gender" name="gender" class="form-control">
+                    <option value="male">Nam</option>
+                    <option value="female">Nữ</option>
+                    <option value="other">Khác</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="products">Sản phẩm quan tâm:</label>
+                <div class="checkbox">
+                    <input type="checkbox" id="hibbityJibbities" name="products[]" value="hibbityJibbities">
+                    <label for="hibbityJibbities">Hibbity Jibbities</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="splashBangers" name="products[]" value="splashBangers">
+                    <label for="splashBangers">SplashBangers</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="whatzits" name="products[]" value="whatzits">
+                    <label for="whatzits">Whatzits</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comments">Bình luận:</label>
+                <textarea id="comments" name="comments" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="lifeStoryFile">Tệp câu chuyện cuộc đời (tùy chọn):</label>
+                <input type="file" id="lifeStoryFile" name="lifeStoryFile" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Gửi</button>
+            <button type="reset" class="btn btn-secondary">Làm mới</button>
+        </form>
+    </div>
+
+
+</body>
+<script></script>
+
+</html>

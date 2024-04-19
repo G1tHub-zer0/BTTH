@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: aqua;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 7px dotted white;
+}
+
+span {
+  text-shadow: 0 0 10px blue;
+  font-weight: 900;
+  font-size: 26px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+img {
+  width: 70%;
+  height: 50%;
+}
+label {
+  float: left;
+}
+
+input {
+  float: left;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.li-child {
+  display: none;
+}
+
+.title {
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+  font-size: 26px;
+}
+
+.form-container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.form-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  display: inline-block;
+  width: calc(60% - 10px);
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-submit {
+  background-color: #04aa6d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-reset {
+  background-color: #ccc;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
