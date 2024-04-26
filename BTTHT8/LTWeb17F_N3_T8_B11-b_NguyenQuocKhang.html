@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
+        integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Bai 11-b</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .form-check-label {
+            margin-bottom: 0;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .topics {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Form Validation</div>
+                    <div class="card-body">
+                        <form id="myForm" method="post" action="#">
+                            <div class="mb-3 form-group">
+                                <label for="firstname" class="form-label">First Name:</label>
+                                <input type="text" class="form-control" id="firstname" name="firstname">
+                                <div class="error" id="firstname-error"></div>
+                            </div>
+                            <div class="mb-3 form-group">
+                                <label for="lastname" class="form-label">Last Name:</label>
+                                <input type="text" class="form-control" id="lastname" name="lastname">
+                                <div class="error" id="lastname-error"></div>
+                            </div>
+                            <div class="mb-3 form-group">
+                                <label for="username" class="form-label">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username">
+                                <div class="error" id="username-error"></div>
+                            </div>
+                            <div class="mb-3 form-group">
+                                <label for="password" class="form-label">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                                <div class="error" id="password-error"></div>
+                            </div>
+                            <div class="mb-3 form-group">
+                                <label for="confirm_password" class="form-label">Confirm Password:</label>
+                                <input type="password" class="form-control" id="confirm_password"
+                                    name="confirm_password">
+                                <div class="error" id="confirm_password-error"></div>
+                            </div>
+                            <div class="mb-3 form-group">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email">
+                                <div class="error" id="email-error"></div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+                                <label class="form-check-label" for="newsletter">I'd like to receive the
+                                    newsletter</label>
+                            </div>
+                            <div class="mb-3 form-check topics">
+                                <input type="checkbox" class="form-check-input" id="topic1" name="topic1">
+                                <label class="form-check-label" for="topic1">Market flash</label>
+                            </div>
+                            <div class="mb-3 form-check topics">
+                                <input type="checkbox" class="form-check-input" id="topic2" name="topic2">
+                                <label class="form-check-label" for="topic2">Latest fuzz</label>
+                            </div>
+                            <div class="mb-3 form-check topics">
+                                <input type="checkbox" class="form-check-input" id="topic3" name="topic3">
+                                <label class="form-check-label" for="topic3">Mailing list digester</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="policy" name="policy">
+                                <label class="form-check-label" for="policy">Please agree to our policy</label>
+                                <div class="error" id="policy-error"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // Hide topics initially
+            $(".topics").hide();
+
+            // Enable/disable topics based on newsletter checkbox
+            $("#newsletter").change(function () {
+                if ($(this).is(":checked")) {
+                    $(".topics").show();
+                } else {
+                    $(".topics").hide();
+                }
+            });
+
+            $("#myForm").submit(function (event) {
+                event.preventDefault();
+                // Validation rules and messages
+                $("#myForm").validate({
+                    rules: {
+                        firstname: {
+                            required: true
+                        },
+                        lastname: {
+                            required: true
+                        },
+                        username: {
+                            required: true
+                        },
+                        password: {
+                            required: true
+                        },
+                        confirm_password: {
+                            required: true,
+                            equalTo: "#password"
+                        },
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        topic1: {
+                            required: function () {
+                                return $("#newsletter").is(":checked");
+                            }
+                        },
+                        topic2: {
+                            required: function () {
+                                return $("#newsletter").is(":checked");
+                            }
+                        },
+                        topic3: {
+                            required: function () {
+                                return $("#newsletter").is(":checked");
+                            }
+                        },
+                        policy: {
+                            required: true
+                        }
+                    },
+                    messages: {
+                        firstname: {
+                            required: "Please enter your first name"
+                        },
+                        lastname: {
+                            required: "Please enter your last name"
+                        },
+                        username: {
+                            required: "Please enter your username"
+                        },
+                        password: {
+                            required: "Please enter your password"
+                        },
+                        confirm_password: {
+                            required: "Please confirm your password",
+                            equalTo: "Passwords do not match"
+                        },
+                        email: {
+                            required: "Please enter your email address",
+                            email: "Please enter a valid email address"
+                        },
+                        topic1: {
+                            required: "Please select at least two topics"
+                        },
+                        topic2: {
+                            required: "Please select at least two topics"
+                        },
+                        topic3: {
+                            required: "Please select at least two topics"
+                        },
+                        policy: {
+                            required: "Please agree to our policy"
+                        }
+                    },
+                    errorPlacement: function (error, element) {
+                        if (element.attr("name") == "topic1" || element.attr("name") == "topic2" || element.attr("name") == "topic3") {
+                            error.insertAfter(".topics:last");
+                        } else {
+                            error.insertAfter(element);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
